@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { login } from '../store/login/login-page.actions';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store) { 
+    this.store.select((app)=>app).subscribe(value=>{
+      console.log(value);
+    })
+  }
 
   ngOnInit(): void {
+  }
+
+  logIn():void{
+    this.store.dispatch(login({username:'Chellappan',password:'password'}))
   }
 
 }
