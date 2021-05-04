@@ -19,7 +19,11 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@contact-keeper/login":["src/app/login/login.module.ts"],
+      "@contact-keeper/routes": ["src/app/routes.ts"]
+    },
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
