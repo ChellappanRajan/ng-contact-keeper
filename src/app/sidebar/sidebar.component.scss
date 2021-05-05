@@ -8,8 +8,23 @@
 }
 .title{
     color: #0A0E1C;
+    padding: 0 25px;
 }
 .nav-container{
     margin-bottom: auto;
+    padding: 0 25px;
     padding-top: 30px;
+}
+.user-info-wrapper{
+    border-top: 1px solid #EEEEEE;
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+}
+.user-info{
+    padding: 0 25px;
+}
+
+.cursor{
+    cursor: pointer;
 }

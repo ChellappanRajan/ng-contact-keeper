@@ -1,0 +1,31 @@
+.header-container{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+}
+.month{
+    font-size: 14px;
+    line-height: 18px;
+    text-align: right;
+    color: #0A0E1C;
+}
+.time{
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+    color: #0A0E1C;
+}
+.form-control{
+    width: 330px;
+}
+
+input{
+    border: 1px solid #EEEEEE;
+    border-radius: 32px;
+}
+input:focus{
+    outline: none;
+}

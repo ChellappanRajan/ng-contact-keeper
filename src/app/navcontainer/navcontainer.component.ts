@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'contact-keeper-navcontainer',
+  selector: 'ck-navcontainer',
   templateUrl: './navcontainer.component.html',
   styleUrls: ['./navcontainer.component.scss']
 })

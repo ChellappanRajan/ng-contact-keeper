@@ -33,27 +33,7 @@ button {cursor: pointer; outline: none; border:0; }
     background: #1997F0;
     border-radius: 5px;
 }
-input{
-    caret-color: #0D3C5C;
-    margin:0;
-	border:0;
-	padding:0;
-	display:inline-block;
-	vertical-align:middle;
-	white-space:normal;
-	background:none;
-	line-height:1;
-	display: block;
-    //Since input element are replace element we need to set widht:100% to take up full width of parent element
-    width: 100%;
-	/* Browsers have different default form fonts */
-	font-size:13px;
-    background: #FFFFFF;
-    border: 1px solid #E5E5E5;
-    box-sizing: border-box;
-    border-radius: 5px;
-    padding: 10px 10px;
-}
+
 
 a{
     text-decoration: none;

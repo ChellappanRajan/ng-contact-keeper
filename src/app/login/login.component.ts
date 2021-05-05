@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { login } from '../store/login/login-page.actions';
 
 @Component({
-  selector: 'app-login',
+  selector: 'ck-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })

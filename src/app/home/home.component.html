@@ -1,11 +1,16 @@
 
 <div class="grid-container">
     <aside>
-        <contact-keeper-sidebar></contact-keeper-sidebar>
+        <ck-sidebar></ck-sidebar>
     </aside>
     <div class="divider">
     </div>
     <main>
-        <router-outlet></router-outlet>
+        <header>
+            <ck-header></ck-header>
+        </header>
+        <div class="main">
+            <router-outlet></router-outlet>
+        </div>
     </main>
 </div>
