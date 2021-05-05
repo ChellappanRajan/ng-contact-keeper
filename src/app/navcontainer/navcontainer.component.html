@@ -1,7 +1,7 @@
 <nav>
     <ul class="menu-lists">
-        <li class="menu-list active">Home</li>
-        <li class="menu-list">About</li>
+        <li class="menu-list " [routerLinkActiveOptions]="{exact: true}"  routerLinkActive="active" routerLink="/contacts">Home</li>
+        <li class="menu-list" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" routerLink="about">About</li>
         <li class="menu-list">Help</li>
     </ul>
 </nav>

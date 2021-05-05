@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavcontainerComponent } from './navcontainer.component';
-import { NavlistModule } from '../navlist/navlist.module';
+
+import { RouterModule } from '@angular/router';
 
 
 
@@ -11,7 +12,7 @@ import { NavlistModule } from '../navlist/navlist.module';
   ],
   imports: [
     CommonModule,
-    NavlistModule
+    RouterModule
   ],
   exports:[NavcontainerComponent]
 })
