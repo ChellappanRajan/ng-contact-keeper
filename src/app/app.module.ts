@@ -12,6 +12,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { reducer, userInfo,LogPageEffects } from './store/login';
 import { LoginService } from './login/login.service';
+import { ContactsModule } from './contacts/contacts.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { LoginService } from './login/login.service';
     BrowserModule,
     HttpClientModule,
     LoginModule,
+    ContactsModule,
     RouterModule.forRoot(RoutesConfig),
     StoreModule.forRoot({[userInfo]:reducer}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: true }),
