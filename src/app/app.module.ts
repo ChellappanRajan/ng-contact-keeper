@@ -1,19 +1,17 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-
-import { AppComponent } from './app.component';
 import { LoginModule } from '@contact-keeper/login';
 import { RoutesConfig } from '@contact-keeper/routes';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-import { reducer, userInfo,LogPageEffects } from './store/login';
-import { LoginService } from './login/login.service';
-import { ContactsModule } from './contacts/contacts.module';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
+import { LoginService } from './login/login.service';
+import { LogPageEffects, reducer, userInfo } from './store/login';
+
 
 @NgModule({
   declarations: [

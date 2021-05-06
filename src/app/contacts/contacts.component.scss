@@ -1,7 +1,12 @@
-.contact-lists{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+.not-found-container{
+    width: 100%;
     height: 100%;
-    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+span{
+    color: blue;
+    cursor: pointer;
 }

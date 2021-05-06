@@ -1,4 +1,13 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+
+export interface Contacts{
+  name:string,
+  email:string,
+  phoneNumber:number,
+  jobtitleAndCompany:string,
+  profilePicture:string,
+  isFavourite:boolean
+}
 
 @Component({
   selector: 'ck-contact-list',
@@ -7,6 +16,8 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class ContactListComponent implements OnInit {
+  
+  @Input() contacts:Contacts[] = [];
 
   constructor() { }
 

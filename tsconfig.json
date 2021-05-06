@@ -22,7 +22,8 @@
     ],
     "paths": {
       "@contact-keeper/login":["src/app/login/login.module.ts"],
-      "@contact-keeper/routes": ["src/app/routes.ts"]
+      "@contact-keeper/routes": ["src/app/routes.ts"],
+      "@ck/about": ["src/app/about/about.module.ts"]
     },
   },
   "angularCompilerOptions": {

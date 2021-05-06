@@ -18,4 +18,5 @@ header{
 .main{
     padding: 30px 70px;
     height: calc( 100vh - 100px);
+    overflow-y: auto;
 }

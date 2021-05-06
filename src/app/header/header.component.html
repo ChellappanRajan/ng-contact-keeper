@@ -3,9 +3,11 @@
         <input type="text" placeholder="Search">
     </div>
     <div class="loggedin-time">
-        <p class="time">11.30</p>
+        <p class="time">
+            {{date | date:'h:mm'}}
+        </p>
         <span class="month">
-            18 August
+            {{date | date:'d MMMM'}}
         </span>
     </div>
 </div>
