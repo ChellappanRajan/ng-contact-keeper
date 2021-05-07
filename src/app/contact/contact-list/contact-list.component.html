@@ -66,7 +66,7 @@
       <h2 class="add-contact">Add Contacts</h2>
       <p>click here to add contacts</p>
     </div>
-    <div class="contact-list-item" *ngFor="let contact of contacts;">
+    <div class="contact-list-item" *ngFor="let contact of contacts | async;">
     <div class="contact-card-header">
         <div class="contact-details">
           <img class="contact-profile-pic" src="https://lh3.googleusercontent.com/ogw/ADGmqu-2D2Qd5LHxnXGWqWKEpaTQKMxMPRiqAkCa-ahn=s83-c-mo" alt="">
@@ -91,3 +91,5 @@
     </div>
     </div>
 </div>
+
+

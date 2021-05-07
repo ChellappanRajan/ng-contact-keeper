@@ -1,14 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
+import { Contacts, ContactsState, getContacts } from '../store/contacts';
 
 
-export interface Contacts{
-  name:string,
-  email:string,
-  phoneNumber:number,
-  jobtitleAndCompany:string,
-  profilePicture:string,
-  isFavourite:boolean
-}
 
 @Component({
   selector: 'ck-contacts',
@@ -16,81 +12,19 @@ export interface Contacts{
   styleUrls: ['./contacts.component.scss']
 })
 export class ContactsComponent implements OnInit {
-  contacts: Contacts[] = [
-    {
-      name:'Chellappan',
-      email:'chellappan@gmail.com',
-      phoneNumber:8754638712,
-      jobtitleAndCompany:'Senior Consultant',
-      profilePicture:'',
-      isFavourite:false
-    },
-    {
-      name:'Chellappan',
-      email:'chellappan@gmail.com',
-      phoneNumber:8754638712,
-      jobtitleAndCompany:'Senior Consultant',
-      profilePicture:'',
-      isFavourite:false
-    },
-    {
-      name:'Chellappan',
-      email:'chellappan@gmail.com',
-      phoneNumber:8754638712,
-      jobtitleAndCompany:'Senior Consultant',
-      profilePicture:'',
-      isFavourite:false
-    },
-    {
-      name:'Chellappan',
-      email:'chellappan@gmail.com',
-      phoneNumber:8754638712,
-      jobtitleAndCompany:'Senior Consultant',
-      profilePicture:'',
-      isFavourite:false
-    },
-    {
-      name:'Chellappan',
-      email:'chellappan@gmail.com',
-      phoneNumber:8754638712,
-      jobtitleAndCompany:'Senior Consultant',
-      profilePicture:'',
-      isFavourite:false
-    },
-    {
-      name:'Chellappan',
-      email:'chellappan@gmail.com',
-      phoneNumber:8754638712,
-      jobtitleAndCompany:'Senior Consultant',
-      profilePicture:'',
-      isFavourite:false
-    }, {
-      name:'Chellappan',
-      email:'chellappan@gmail.com',
-      phoneNumber:8754638712,
-      jobtitleAndCompany:'Senior Consultant',
-      profilePicture:'',
-      isFavourite:false
-    }, {
-      name:'Chellappan',
-      email:'chellappan@gmail.com',
-      phoneNumber:8754638712,
-      jobtitleAndCompany:'Senior Consultant',
-      profilePicture:'',
-      isFavourite:false
-    }, {
-      name:'Chellappan',
-      email:'chellappan@gmail.com',
-      phoneNumber:8754638712,
-      jobtitleAndCompany:'Senior Consultant',
-      profilePicture:'',
-      isFavourite:false
-    }
-  ];
+  contacts$!: Observable<Contacts[] | undefined>;
 
-  constructor() { }
+  constructor(private store: Store<ContactsState>) { }
 
   ngOnInit(): void {
+    this.store.subscribe(value=>{
+      console.log(value);
+    })
+    this.contacts$ = this.getContacts().pipe(tap((contacts)=>console.log(contacts)));
+  }
+
+  getContacts():Observable<Contacts[] | undefined>{
+    return this.store.select(getContacts);
   }
 
 }

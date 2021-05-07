@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 export interface Contacts{
   name:string,
@@ -17,7 +18,7 @@ export interface Contacts{
 })
 export class ContactListComponent implements OnInit {
   
-  @Input() contacts:Contacts[] = [];
+  @Input() contacts!: Observable<Contacts[] | undefined>;
 
   constructor() { }
 

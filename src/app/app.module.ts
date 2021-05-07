@@ -10,6 +10,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { LoginService } from './login/login.service';
+import { contacts, ContactsEffects,reducer as contactReducer } from './store/contacts';
 import { LogPageEffects, reducer, userInfo } from './store/login';
 
 
@@ -23,9 +24,9 @@ import { LogPageEffects, reducer, userInfo } from './store/login';
     LoginModule,
     HomeModule,
     RouterModule.forRoot(RoutesConfig),
-    StoreModule.forRoot({[userInfo]:reducer}),
+    StoreModule.forRoot({[userInfo]:reducer,[contacts]:contactReducer}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: true }),
-    EffectsModule.forRoot([LogPageEffects]),
+    EffectsModule.forRoot([LogPageEffects, ContactsEffects]),
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]
