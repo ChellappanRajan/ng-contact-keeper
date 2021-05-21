@@ -16,6 +16,10 @@ export const RoutesConfig: Routes = [
       {
         path:'about',
         loadChildren:async ()=> (await import('@ck/about')).AboutModule 
+      },
+      {
+        path:'add-contact',
+        loadChildren:async()=>(await import('@ck/add-contact')).AddContactModule
       }
     ]
   },

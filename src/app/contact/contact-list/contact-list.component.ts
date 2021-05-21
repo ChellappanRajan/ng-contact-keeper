@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy,EventEmitter, Component, Input, OnInit, Output } from '@angular/core';
+
 import { Observable } from 'rxjs';
 
 export interface Contacts{
@@ -19,10 +20,16 @@ export interface Contacts{
 export class ContactListComponent implements OnInit {
   
   @Input() contacts!: Observable<Contacts[] | undefined>;
+  @Output() addContactClick = new EventEmitter<Event>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  addContact(event:Event):void{
+    this.addContactClick.emit(event);
+  }
+
 
 }
